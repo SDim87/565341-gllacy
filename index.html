@@ -6,12 +6,12 @@
   </head>
   <body>
   	<!-- <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p> -->
-		<header class="main-header" id="top-header">
+		<header class="main-header wrapper" id="top-header">
       <nav class="main-header__main-nav main-nav">
         <a class="main-nav__logo" href="#top-header"><img src="img/Logo.png" width="154" height="64" alt="Магазин мороженного «Gllacy Shop»"></a>
         <ul class="main-nav__site-nav site-nav">
           <li class="site-nav__item catalog"><a href="catalog.html">Каталог</a>
-          	<ul class="catalog-list">
+          	<ul class="catalog-list hidden-content">
           		<li class="catalog-list__item catalog-list__new"><a href="#">Новинки</a></li>
           		<li class="catalog-list__item"><a href="#">Сливочное</a></li>
           		<li class="catalog-list__item"><a href="#">Щербеты</a></li>
@@ -41,12 +41,94 @@
       <section class="main-header__slider slider">
       	<h3 class="slider__hidden-content">Блок слайдер</h3>
       	<b>Крем-брюле и пломбир с малиновым джемом</b>
-      	<i class="slider__inner active"></i>
+      	<i class="slider__inner slider__inner_active"></i>
       	<i class="slider__inner"></i>
       	<i class="slider__inner"></i>
       	<button class="slider__btn btn">Давайте оба!</button>
       </section>
     </header>
 
+    <section class="banners wrapper">
+    	<article class="banners__raspberry banner">
+    		<b>Малинка даром!</b>
+    		<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+    	</article>
+    	<article class="banners__chocolate banner">
+    		<b>Шоколадки даром!</b>
+    		<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+    	</article>
+    </section>
+
+    <section class="hits wrapper">
+    	<ul class="hits__list">
+    		<li class="hits__list_item">
+    			<a href="#">
+    				<img src="img/1.jpg" alt="Мороженое сливочное с апельсиновым">
+    				<b>310&#8381;/кг</b>
+    				<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+    			</a>
+    		</li>
+    		<li class="hits__list_item">
+    			<a href="#">
+    				<img src="img/2.jpg" alt="Мороженое сливочно-кофейное с кусочками шоколада">
+    				<b>380&#8381;/кг</b>
+    				<p>Сливочно-кофейное с кусочками шоколада</p>
+    			</a>
+    		</li>
+    		<li class="hits__list_item">
+    			<a href="#">
+    				<img src="img/3.jpg" alt="Мороженое сливочно-клубничное с присыпкой из белого шоколада">
+    				<b>355&#8381;/кг</b>
+    				<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+    			</a>
+    		</li>
+    		<li class="hits__list_item">
+    			<a href="#">
+    				<img src="img/4.jpg" alt="Мороженное сливочное крем-брюле с карамельной подливкой">
+    				<b>415&#8381;/кг</b>
+    				<p>Сливочное крем-брюле с карамельной подливкой</p>
+    			</a>
+    		</li>
+    	</ul>
+    </section>
+
+    <section class="advantages wrapper">
+    	<p class="advantages__item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+    	<p class="advantages__item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+    	<p class="advantages__item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+    	<p class="advantages__item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+    </section>
+
+    <section class="news-box wrapper">
+    	<article class="news-box__blog">
+    		<p class="">Новое в нашем блоге</p>
+    		<b>10 способов сервировки фруктовых щербетов к столу</b>
+    	</article>
+    	<!-- Сдесь будет form-->
+    </section>
+    <section class="maps">
+    	<div class="maps__address">
+    		<p>Адрес главного офиса и офлайн-магазина:</p>
+    		<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+    		<p>Для заказов по телефону:</p>
+    		<p>8 812 450-25-25</p>
+    		<p>(с 10 до 20 ежедневно)</p>
+    		<button class="maps__address_btn btn">Форма обратной связи</button>
+    	</div>
+    </section>
+
+    <footer class="main-footer">
+    	<div class="main-footer__social"></div>
+			<ul class="main-footer__social_list social">
+				<li class="social__item"><a href="#">Для поставщиков</a></li>
+				<li class="social__item"><a href="#">О производстве</a></li>
+				<li class="social__item"><a href="#">Наши документы</a></li>
+				<li class="social__item"><a href="#">Экологические стандарты</a></li>
+			</ul>
+			<div class="main-footer__copyright">
+				<a href="https://htmlacademy.ru"><img src="logo-htmlacademy-small.png" alt="logo-htmlacademy"></a>
+				<p>Сделано в HTML Academy	&copy; 2017</p>
+			</div>
+    </footer>
   </body>
 </html>
