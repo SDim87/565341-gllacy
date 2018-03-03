@@ -6,26 +6,46 @@
   </head>
   <body>
   	<!-- <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p> -->
-		<header class="main-header">
-      <nav class="main-header__main-nav">
-        <img src="img/Logo.png" class="main-nav__logo" width="" height="" alt="Магазин мороженного «Gllacy Shop»">
-        <ul class="main-nav__site-navigation">
-          <li class="main-nav__site-navigation_item"><a href="catalog.html">Каталог</a></li>
-          <li class="main-nav__site-navigation_item"><a href="ship-pay.html">Доставка и оплата</a></li>
-          <li class="main-nav__site-navigation_item"><a href="info.html">О Компании</a></li>
+		<header class="main-header" id="top-header">
+      <nav class="main-header__main-nav main-nav">
+        <a class="main-nav__logo" href="#top-header"><img src="img/Logo.png" width="154" height="64" alt="Магазин мороженного «Gllacy Shop»"></a>
+        <ul class="main-nav__site-nav site-nav">
+          <li class="site-nav__item catalog"><a href="catalog.html">Каталог</a>
+          	<ul class="catalog-list">
+          		<li class="catalog-list__item catalog-list__new"><a href="#">Новинки</a></li>
+          		<li class="catalog-list__item"><a href="#">Сливочное</a></li>
+          		<li class="catalog-list__item"><a href="#">Щербеты</a></li>
+          		<li class="catalog-list__item"><a href="#">Фруктовый лед</a></li>
+          		<li class="catalog-list__item"><a href="#">Мелорин</a></li>
+          	</ul>
+          </li>
+          <li class="site-nav__item"><a href="#">Доставка и оплата</a></li>
+          <li class="site-nav__item"><a href="#">О Компании</a></li>
         </ul>
-        <form class="main-nav__form" action="">
-        	<input class="main-nav__form_search" type="search" name="" id="">		
-        </form>
-        <ul class="main-nav__user-navigation">
-          <li class="main-nav__user-navigation_login-link">Вход</li>
-        </ul>
-        <ul class="main-nav__basket">
-        	<li class="main-nav__basket_blank">Пусто</li>
-        </ul>
-        <p class="main-nav__time">С 10 до 20, ежедневно</p>
-        <p class="main-nav__number">8 812 450-25-25</p>
       </nav>
+      <section class="main-header__inputs inputs">
+      	<h3 class="inputs__hidden hidden-content">Блок ввода данных</h3>
+      	<button class="inputs__btn"></button>
+      	<form class="inputs__form" action="post">
+      		<input class="inputs__form_search" id="main-nav_search" type="search" name="main-nav_search">		
+      	</form>
+      	<ul class="inputs__user-navigation">
+      		<li class="inputs__user-navigation_login">Вход</li>
+      	</ul>
+      	<ul class="inputs__basket">
+      		<li class="inputs__basket_blank">Пусто</li>
+      	</ul>
+      </section>
+      <p class="main-header__time">С 10 до 20, ежедневно</p>
+      <p class="main-header__number">8 812 450-25-25</p>
+      <section class="main-header__slider slider">
+      	<h3 class="slider__hidden-content">Блок слайдер</h3>
+      	<b>Крем-брюле и пломбир с малиновым джемом</b>
+      	<i class="slider__inner active"></i>
+      	<i class="slider__inner"></i>
+      	<i class="slider__inner"></i>
+      	<button class="slider__btn btn">Давайте оба!</button>
+      </section>
     </header>
 
   </body>
