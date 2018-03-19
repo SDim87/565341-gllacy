@@ -61,7 +61,7 @@ a{
     display: flex;
     flex-direction: column;
 }
-.wrapper{
+.wrapper-navigation{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -222,7 +222,6 @@ a{
     font-weight: 500;
     line-height: 16px;
 }
-
 .login__btn::after{
     position: absolute;
     content: '';
@@ -236,9 +235,6 @@ a{
 }
 .login-form{
     display: none;
-}
-.user-nav__basket{
-
 }
 .basket__link{
     position: relative;
@@ -312,6 +308,23 @@ a{
     flex-direction: column;
     align-items: center;
 }
+/*========= filters ==========*/
+.filters{
+    width: 879px;
+}
+.filters__form{
+    display: inline-flex;
+    flex-direction: column;
+}
+.filters__wrapper{
+    display: inline-flex;
+}
+.select__title, .range__title, .radio__title,.checkbox__title{
+    font-size: 14px;
+    line-height: 16px;
+}
+.range__title{
+}
 /*============ banners =================*/
 .banners{
     display: flex;
@@ -363,9 +376,16 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .product__item{
     width: 267px;
+}
+/*============== page-control ==========*/
+.page-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 /*============== advantages =================*/
 .advantages{
@@ -378,23 +398,32 @@ a{
     flex-direction: row;
     justify-content: space-between;
 }
-.news{
+.banner--news{
     min-height: 220px;
     background-image: url(../img/bg-strawberry.jpg);
     background-repeat: no-repeat;
 }
-.subscribe{
+.banner--subscribe{
     min-height: 220px;
 }
 /*========== map ================*/
 .map{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     min-height: 430px;
     background-image: url(../img/bg-map.jpg);
     background-repeat: no-repeat;
 }
+.contacts{
+    width: 302px;
+    margin-left: auto;
+}
 /*=========== footer ===========*/
 .main-footer .container{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .social{
     width: 267px;
@@ -405,3 +434,5 @@ a{
 .main-footer__copyright{
     width: 267px;
 }
+
+

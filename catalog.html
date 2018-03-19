@@ -8,74 +8,105 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
-        <a class="logo" href="index.html"><img src="img/logo.png" width="154" height="64" alt="Магазин мороженного «Gllacy Shop»"></a>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="catalog.html">Каталог</a>
-            <ul class="main-nav__sub-list">
-              <li class="sub-list__item sub-list__item--underline"><a href="#">Новинки</a></li>
-              <li class="sub-list__item"><a href="#">Сливочное</a></li>
-              <li class="sub-list__item"><a href="#">Щербеты</a></li>
-              <li class="sub-list__item"><a href="#">Фруктовый лед</a></li>
-              <li class="sub-list__item"><a href="#">Мелорин</a></li>
+      <div class="container">
+        <div class="wrapper">
+          <a class="logo" href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Магазин мороженного «Gllacy Shop»"></a>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a href="catalog.html">Каталог</a><!-- main-nav__item--active если на стр находимся-->
+                <ul class="main-nav__sub-list">
+                  <li class="sub-list__item sub-list__item--bold sub-list__item--active"><a href="#">Новинки</a></li>
+                  <li class="sub-list__item sub-list__item--active"><a href="#">Сливочное</a></li>
+                  <li class="sub-list__item sub-list__item--active"><a href="#">Щербеты</a></li>
+                  <li class="sub-list__item sub-list__item--active"><a href="#">Фруктовый лед</a></li>
+                  <li class="sub-list__item sub-list__item--active"><a href="#">Мелорин</a></li>
+                </ul>
+              </li>
+              <li class="main-nav__item"><a href="#">Доставка и оплата</a></li>
+              <li class="main-nav__item"><a href="#">О Компании</a></li>
             </ul>
-          </li>
-          <li class="main-nav__item"><a href="#">Доставка и оплата</a></li>
-          <li class="main-nav__item"><a href="#">О Компании</a></li>
-        </ul>
-      </nav>
-      <section class="user-nav">
-        <a class="user-nav__search">Поиск</a>
-        <form class="user-nav__form" method="post" action="https://echo.htmlacademy.ru">
-          <input class="form__search" id="user-nav__search" type="search" name="user-nav__search" placeholder="Поиск">
-          <input class="visually-hidden" type="submit" value="Искать">
-        </form>
+          </nav>
+          <section class="user-nav" aria-label="Клиентская навигация">
+            <div class="search-box">
+              <a class="user-nav__search"></a>
+              <form class="user-nav__form" method="post" action="https://echo.htmlacademy.ru">
+                <input class="form__search" id="user-nav__search" type="search" name="user-nav__search">
+                <input class="visually-hidden" type="submit" value="Искать">
+              </form>
+            </div>
 
-        <div class="login">
-          <a class="user-nav__btn user-nav__btn--login" href="#">Вход</a>
-          <div class="login-form">
-            <form action="https://echo.glassy.ru" method="post" enctype="text/plain">
-              <div class="login-form__container">
-                <input id="login" type="email" name="email" class="login-form__field login-form__field--email" placeholder="Электронная почта" required>
-                <label class="login-form__label" for="login">Электронная почта</label>
+            <div class="login">
+              <a class="login__btn" href="#">Вход</a>
+              <div class="login-form">
+                <form action="https://echo.glassy.ru" method="post" enctype="text/plain">
+                  <div class="login-form__container">
+                    <input id="login" type="email" name="email" class="login-form__field login-form__field--email" placeholder="Электронная почта" required>
+                    <label class="login-form__label" for="login">Электронная почта</label>
+                  </div>
+                  <div class="login-form__container">
+                    <input id="password" type="password" name="password" class="login-form__field login-form__field--password" placeholder="Пароль" required>
+                    <label  class="login-form__label" for="password">Пароль</label>
+                  </div>
+                  <button type="submit" class="btn login-form__btn-enter">Войти</button>
+                  <div class="login-form__links">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
+                </form>
               </div>
-              <div class="login-form__container">
-                <input id="password" type="password" name="password" class="login-form__field login-form__field--password" placeholder="Пароль" required>
-                <label  class="login-form__label" for="password">Пароль</label>
-              </div>
-              <button type="submit" class="btn login-form__btn-enter">Войти</button>
-              <div class="login-form__links">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
-              </div>
-            </form>
+            </div>
+
+            <a class="basket__link" href="#">Пусто</a>
+            <div class="basket__popup">
+              <table class="table__popup">
+                <tr class="table__row">
+                  <td class="table__cell"><button class="close">Убрать</button></td>
+                  <td class="table__cell"><img src="img/basket-img-1.jpg" alt="Пломбир с апельсиновым джемом"></td>
+                  <td class="table__cell">Пломбир с апельсиновым джемом</td>
+                  <td class="table__cell">1,5 кг х 200 руб.</td>
+                  <td class="table__cell">300 руб.</td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell"><button class="close">Убрать</button></td>
+                  <td class="table__cell"><img src="img/basket-img-2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                  <td class="table__cell">Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class="table__cell">1,5 кг х 300 руб.</td>
+                  <td class="table__cell">450 руб.</td>
+                </tr>
+              </table><hr>
+              <p>Итого: <span>750 руб.</span></p>
+              <a class="btn" href="#">Оформить заказ</a>
+            </div>
+          </section>
+        </div>
+        <div class="main-header__contacts">
+          <p class="time">С 10 до 20, ежедневно</p>
+          <p class="number">8 812 450-25-25</p>
+        </div>
+        <section class="main-header__slider">
+          <div class="slides">
+            <div class="slides__item">
+              <h2 class="slides__title">Крем-брюле и пломбир с малиновым джемом</h2>
+              <a class="btn slides__btn" href="#">Давайте оба!</a>
+            </div>
+
+            <!-- <div class="slides__item">
+              <h2 class="slides__title">Шоколадный пломбир и лимонный сорбет</h2>
+              <a class="btn slides__btn" href="#">Давайте оба!</a>
+            </div>
+
+            <div class="slides__item">
+              <h2 class="slides__title">Пломбир с помадкой и клубничный щербет</h2>
+              <a class="btn slides__btn" href="#">Давайте оба!</a>
+            </div> -->
           </div>
-        </div>
-
-        <a class="user-nav__basket" href="#">2 товара</a>
-        <div class="basket__popup">
-          <table class="table__popup">
-            <tr class="table__row">
-              <td class="table__cell"><button class="close">Убрать</button></td>
-              <td class="table__cell"><img src="img/basket-img-1.jpg" alt="Пломбир с апельсиновым джемом"></td>
-              <td class="table__cell">Пломбир с апельсиновым джемом</td>
-              <td class="table__cell">1,5 кг х 200 руб.</td>
-              <td class="table__cell">300 руб.</td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__cell"><button class="close">Убрать</button></td>
-              <td class="table__cell"><img src="img/basket-img-2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-              <td class="table__cell">Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td class="table__cell">1,5 кг х 300 руб.</td>
-              <td class="table__cell">450 руб.</td>
-            </tr>
-          </table><hr>
-          <p>Итого: <span>750 руб.</span></p>
-          <a class="btn" href="#">Оформить заказ</a>
-        </div>
-      </section>
-      <p class="main-header__time">С 10 до 20, ежедневно</p>
-      <p class="main-header__number">8 812 450-25-25</p>
+          <div class="inners">
+            <i class="slider__inner slider__inner--active">&bull;</i>
+            <i class="slider__inner">&bull;</i>
+            <i class="slider__inner">&bull;</i>
+          </div>
+        </section>
+      </div>
     </header>
     <main>
       <ul class="breadcrumb">
@@ -85,58 +116,62 @@
       </ul>
       <h1>Сливочное мороженое</h1>
       <section class="filters">
-        <form action="https://htmlacademy.ru" method="post">
-          <div class="select">
-            <h4 class="select__title">Сортировка:</h4>
-            <select class="select__list" name="sort" id="filters-sort">
-              <option class="select__item" value="on-popularity">по популярности</option>
-              <option class="select__item" value="first-cheap">сначала недорогие</option>
-              <option class="select__item" value="first-expensive">сначала дорогие</option>
-              <option class="select__item" value="of-fat">по жирности</option>
-            </select>
+        <form class="filters__form" action="https://htmlacademy.ru" method="post">
+          <div class="filters__wrapper">
+            <div class="select">
+              <h4 class="select__title">Сортировка:</h4>
+              <select class="select__list" name="sort" id="filters-sort">
+                <option class="select__item" value="on-popularity">по популярности</option>
+                <option class="select__item" value="first-cheap">сначала недорогие</option>
+                <option class="select__item" value="first-expensive">сначала дорогие</option>
+                <option class="select__item" value="of-fat">по жирности</option>
+              </select>
+            </div>
+            <div class="range" aria-label="Регулировка цены">
+              <h4 class="range__title">Цена: 100 руб. – 500 руб.</h4>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="radio">
+              <h4 class="radio__title">Жирность:</h4>
+              <input type="radio" name="filters-radio" id="filters-radio-zero-percent">
+              <label for="filters-radio-zero-percent">0%</label>
+
+              <input type="radio" name="filters-radio" id="filters-radio-to-ten-percent">
+              <label for="filters-radio-to-ten-percent">до 10%</label>
+
+              <input type="radio" name="filters-radio" id="filters-radio-to-thirty-percent">
+              <label for="filters-radio-to-thirty-percent">до 30%</label>
+
+              <input type="radio" name="filters-radio" id="filters-radio-more-thirty-percent">
+              <label for="filters-radio-more-thirty-percent">выше 30%</label>
+            </div>
           </div>
-          <div class="range">
-            <label class="visually-hidden" for="filters-range">Регулировка цены</label>
-            <h4>Цена: 100 руб. – 500 руб.</h4>
-            <input type="range" name="range" id="filters-range">
+          <div class="filters__wrapper">
+            <div class="checkbox">
+              <h4 class="checkbox__title">Наполнители:</h4>
+              <input type="checkbox" name="chocolate" id="checkbox-chocolate">
+              <label for="checkbox-chocolate">шоколадные</label>
+
+              <input type="checkbox" name="sugar-powder" id="checkbox-sugar-powder">
+              <label for="checkbox-sugar-powder">сахарные присыпки</label>
+
+              <input type="checkbox" name="fruits" id="checkbox-fruits">
+              <label for="checkbox-fruits">фрукты</label>
+
+              <input type="checkbox" name="syrups" id="checkbox-syrups">
+              <label for="checkbox-syrups">сиропы</label>
+
+              <input type="checkbox" name="jams" id="checkbox-jams">
+              <label for="checkbox-jams">джемы</label>
+            </div>
+            <button class="filters__btn" type="submit">Применить</button>
           </div>
-          <div class="radio">
-            <h4 class="radio__title">Жирность:</h4>
-            <input type="radio" name="filters-radio" id="filters-radio-zero-percent">
-            <label for="filters-radio-zero-percent">0%</label>
-
-            <input type="radio" name="filters-radio" id="filters-radio-to-ten-percent">
-            <label for="filters-radio-to-ten-percent">до 10%</label>
-
-            <input type="radio" name="filters-radio" id="filters-radio-to-thirty-percent">
-            <label for="filters-radio-to-thirty-percent">до 30%</label>
-
-            <input type="radio" name="filters-radio" id="filters-radio-more-thirty-percent">
-            <label for="filters-radio-more-thirty-percent">выше 30%</label>
-          </div>
-          <div class="checkbox">
-            <h4 class="checkbox__title">Наполнители:</h4>
-            <input type="checkbox" name="chocolate" id="checkbox-chocolate">
-            <label for="checkbox-chocolate">шоколадные</label>
-
-            <input type="checkbox" name="sugar-powder" id="checkbox-sugar-powder">
-            <label for="checkbox-sugar-powder">сахарные присыпки</label>
-
-            <input type="checkbox" name="fruits" id="checkbox-fruits">
-            <label for="checkbox-fruits">фрукты</label>
-
-            <input type="checkbox" name="syrups" id="checkbox-syrups">
-            <label for="checkbox-syrups">сиропы</label>
-
-            <input type="checkbox" name="jams" id="checkbox-jams">
-            <label for="checkbox-jams">джемы</label>
-          </div>
-          <button class="filters__btn" type="submit">Применить</button>
         </form>
       </section>
 
-      <section class="product">
-        <h3 class="visually-hidden">Ассортимент</h3>
+      <section class="product" aria-label="Ассортимент">
         <div class="product__item">
           <img src="img/icecream-1.jpg" alt="Мороженое сливочное с апельсиновым">
           <p><b>310 &#8381;</b><span class="small-font">/кг</span></p>
@@ -210,9 +245,7 @@
           <a class="btn" href="#">Быстрый просмотр</a>
         </div>
       </section>
-
-      <section class="page-control">
-        <h3 class="visually-hidden">Страничная навигация</h3>
+      <section class="page-control" aria-label="Страничная навигация">
         <a class="page-control__item">&#60;</a>
         <a class="page-control__item">1</a>
         <a class="page-control__item" href="#">2</a>
@@ -224,21 +257,23 @@
     </main>
 
     <footer class="main-footer">
-      <div class="social">
-        <a class="social__item" href="#">TW</a>
-        <a class="social__item" href="#">Inst</a>
-        <a class="social__item" href="#">FB</a>
-        <a class="social__item" href="#">VK</a>
-      </div>
-      <ul class="main-footer__menu">
-        <li class="footer-menu__item footer-menu__item--heart"><a href="#">Для поставщиков</a></li>
-        <li class="footer-menu__item"><a href="#">О производстве</a></li>
-        <li class="footer-menu__item"><a href="#">Наши документы</a></li>
-        <li class="footer-menu__item"><a href="#">Экологические стандарты</a></li>
-      </ul>
-      <div class="main-footer__copyright">
-        <a href="https://htmlacademy.ru" target="_blank">htmlacademy</a>
-        <p>Сделано в HTML Academy &copy; 2017</p>
+      <div class="container">
+        <div class="social">
+          <a class="social__item" href="#">TW</a>
+          <a class="social__item" href="#">Inst</a>
+          <a class="social__item" href="#">FB</a>
+          <a class="social__item" href="#">VK</a>
+        </div>
+        <ul class="main-footer__menu">
+          <li class="footer-menu__item footer-menu__item--heart"><a href="#">Для поставщиков</a></li>
+          <li class="footer-menu__item"><a href="#">О производстве</a></li>
+          <li class="footer-menu__item"><a href="#">Наши документы</a></li>
+          <li class="footer-menu__item"><a href="#">Экологические стандарты</a></li>
+        </ul>
+        <div class="main-footer__copyright">
+          <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy-small.svg" width="120" height="38" alt="Ссылка на сайт htmlacademy"></a>
+          <p>Сделано в HTML Academy &copy; 2017</p>
+        </div>
       </div>
     </footer>
   </body>
