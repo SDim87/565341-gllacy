@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -11,7 +13,7 @@
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="catalog.html">Каталог</a>
             <ul class="main-nav__sub-list">
-              <li class="sub-list__item sub-list__item_new"><a href="#">Новинки</a></li>
+              <li class="sub-list__item sub-list__item--underline"><a href="#">Новинки</a></li>
               <li class="sub-list__item"><a href="#">Сливочное</a></li>
               <li class="sub-list__item"><a href="#">Щербеты</a></li>
               <li class="sub-list__item"><a href="#">Фруктовый лед</a></li>
@@ -23,11 +25,9 @@
         </ul>
       </nav>
       <section class="user-nav">
-        <h3 class="visually-hidden"></h3>
         <a class="user-nav__search">Поиск</a>
         <form class="user-nav__form" method="post" action="https://echo.htmlacademy.ru">
-          <label class="visually-hidden" for="user-nav__search">Поиск</label>
-          <input class="form__search" id="user-nav__search" type="search" name="user-nav__search">
+          <input class="form__search" id="user-nav__search" type="search" name="user-nav__search" placeholder="Поиск">
           <input class="visually-hidden" type="submit" value="Искать">
         </form>
 
@@ -86,22 +86,21 @@
       <h1>Сливочное мороженое</h1>
       <section class="filters">
         <form action="https://htmlacademy.ru" method="post">
-          <p class="select">
+          <div class="select">
             <h4 class="select__title">Сортировка:</h4>
-            <label class="visually-hidden" for="filters-select">Регулировка цены</label>
             <select class="select__list" name="sort" id="filters-sort">
               <option class="select__item" value="on-popularity">по популярности</option>
               <option class="select__item" value="first-cheap">сначала недорогие</option>
               <option class="select__item" value="first-expensive">сначала дорогие</option>
               <option class="select__item" value="of-fat">по жирности</option>
             </select>
-          </p>
-          <p class="range">
+          </div>
+          <div class="range">
             <label class="visually-hidden" for="filters-range">Регулировка цены</label>
             <h4>Цена: 100 руб. – 500 руб.</h4>
             <input type="range" name="range" id="filters-range">
-          </p>
-          <p class="radio">
+          </div>
+          <div class="radio">
             <h4 class="radio__title">Жирность:</h4>
             <input type="radio" name="filters-radio" id="filters-radio-zero-percent">
             <label for="filters-radio-zero-percent">0%</label>
@@ -114,8 +113,8 @@
 
             <input type="radio" name="filters-radio" id="filters-radio-more-thirty-percent">
             <label for="filters-radio-more-thirty-percent">выше 30%</label>
-          </p>
-          <p class="checkbox">
+          </div>
+          <div class="checkbox">
             <h4 class="checkbox__title">Наполнители:</h4>
             <input type="checkbox" name="chocolate" id="checkbox-chocolate">
             <label for="checkbox-chocolate">шоколадные</label>
@@ -131,12 +130,13 @@
 
             <input type="checkbox" name="jams" id="checkbox-jams">
             <label for="checkbox-jams">джемы</label>
-          </p>
-          <button class="filters__btn">Применить</button>
+          </div>
+          <button class="filters__btn" type="submit">Применить</button>
         </form>
       </section>
 
       <section class="product">
+        <h3 class="visually-hidden">Ассортимент</h3>
         <div class="product__item">
           <img src="img/icecream-1.jpg" alt="Мороженое сливочное с апельсиновым">
           <p><b>310 &#8381;</b><span class="small-font">/кг</span></p>
@@ -212,6 +212,7 @@
       </section>
 
       <section class="page-control">
+        <h3 class="visually-hidden">Страничная навигация</h3>
         <a class="page-control__item">&#60;</a>
         <a class="page-control__item">1</a>
         <a class="page-control__item" href="#">2</a>
