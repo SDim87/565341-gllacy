@@ -100,21 +100,25 @@
               <a class="btn slides__btn" href="#">Давайте оба!</a>
             </div> -->
           </div>
-          <i class="slider__inner slider__inner--active">&bull;</i>
-          <i class="slider__inner">&bull;</i>
-          <i class="slider__inner">&bull;</i>
+          <div class="inners">
+            <i class="slider__inner slider__inner--active">&bull;</i>
+            <i class="slider__inner">&bull;</i>
+            <i class="slider__inner">&bull;</i>
+          </div>
         </section>
       </div>
     </header>
-    <main>
+    <main class="container">
       <section class="banners" aria-label="Рекламные баннеры">
         <article class="banner banner--raspberry">
           <h3 class="banner__title">Малинка даром!</h3>
           <p class="banner__content">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a class="btn banner__btn" href="#">Хочу варенье!</a>
         </article>
         <article class="banner banner--chocolate">
           <h3 class="banner__title">Шоколадки даром!</h3>
           <p class="banner__content">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a class="btn banner__btn" href="#">Хочу шоколадки!</a>
         </article>
       </section>
 
@@ -154,11 +158,11 @@
       </section>
 
       <section class="group-box">
-        <article class="news">
+        <article class="banner news">
           <h4 class="news__title">Новое в нашем блоге</h4>
           <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
-        <article class="subscribe" aria-label="Подписка на email рассылку">
+        <article class="banner subscribe" aria-label="Подписка на email рассылку">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="subscribe-email"></label>
@@ -177,21 +181,23 @@
     </section>
 
     <footer class="main-footer">
-      <div class="social">
-        <a class="social__item" href="#">TW</a>
-        <a class="social__item" href="#">Inst</a>
-        <a class="social__item" href="#">FB</a>
-        <a class="social__item" href="#">VK</a>
-      </div>
-      <ul class="main-footer__menu">
-        <li class="footer-menu__item footer-menu__item--heart"><a href="#">Для поставщиков</a></li>
-        <li class="footer-menu__item"><a href="#">О производстве</a></li>
-        <li class="footer-menu__item"><a href="#">Наши документы</a></li>
-        <li class="footer-menu__item"><a href="#">Экологические стандарты</a></li>
-      </ul>
-      <div class="main-footer__copyright">
-        <a href="https://htmlacademy.ru" target="_blank">htmlacademy</a>
-        <p>Сделано в HTML Academy &copy; 2017</p>
+      <div class="container">
+        <div class="social">
+          <a class="social__item" href="#">TW</a>
+          <a class="social__item" href="#">Inst</a>
+          <a class="social__item" href="#">FB</a>
+          <a class="social__item" href="#">VK</a>
+        </div>
+        <ul class="main-footer__menu">
+          <li class="footer-menu__item footer-menu__item--heart"><a href="#">Для поставщиков</a></li>
+          <li class="footer-menu__item"><a href="#">О производстве</a></li>
+          <li class="footer-menu__item"><a href="#">Наши документы</a></li>
+          <li class="footer-menu__item"><a href="#">Экологические стандарты</a></li>
+        </ul>
+        <div class="main-footer__copyright">
+          <a href="https://htmlacademy.ru" target="_blank">htmlacademy</a>
+          <p>Сделано в HTML Academy &copy; 2017</p>
+        </div>
       </div>
     </footer>
   </body>

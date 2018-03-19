@@ -56,15 +56,9 @@ a{
 .container{
     padding-left: 27px;
     padding-right: 27px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
+}
+.main-header .container{
     display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
     flex-direction: column;
 }
 .wrapper{
@@ -317,4 +311,97 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/*============ banners =================*/
+.banners{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 19px;
+}
+.banner{
+    width: 560px;
+    min-height: 229px;
+    border-radius: 15px;
+}
+.banner a{
+    display: inline-block;
+}
+.banner--raspberry{
+    background-image: url(../img/bg-banner-raspberry.jpg);
+    background-repeat: no-repeat;
+}
+.banner--chocolate{
+    background-image: url(../img/bg-banner-chocolate.jpg);
+    background-repeat: no-repeat;
+}
+.banner__title{
+    margin: 0;
+    padding: 17px;
+    padding-bottom: 14px;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+}
+.banner__content{
+    margin: 0;
+    padding: 0;
+    padding-left: 19px;
+    padding-right: 19px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.banner__btn{
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 20px;
+}
+/*========= product ===========*/
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.product__item{
+    width: 267px;
+}
+/*============== advantages =================*/
+.advantages{
+    background-image: url(../img/bg-waffle.jpg);
+    background-repeat: repeat;
+}
+/*========== group-box ==============*/
+.group-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.news{
+    min-height: 220px;
+    background-image: url(../img/bg-strawberry.jpg);
+    background-repeat: no-repeat;
+}
+.subscribe{
+    min-height: 220px;
+}
+/*========== map ================*/
+.map{
+    min-height: 430px;
+    background-image: url(../img/bg-map.jpg);
+    background-repeat: no-repeat;
+}
+/*=========== footer ===========*/
+.main-footer .container{
+    display: flex;
+}
+.social{
+    width: 267px;
+}
+.main-footer__menu{
+    width: 560px;
+}
+.main-footer__copyright{
+    width: 267px;
 }
