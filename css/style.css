@@ -47,6 +47,10 @@ body{
 a{
     text-decoration: none;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
 .main-header{
     background-image: url('../img/bg-header-1.png');
     background-repeat: no-repeat;
@@ -80,6 +84,7 @@ a{
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-top: -10px;
 }
 .main-nav__item{
     position: relative;
@@ -149,14 +154,15 @@ a{
 }
 .search-box{
     position: relative;
-    margin-right: 10px;
 }
 .user-nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 267px;
     margin-left: auto;
+    margin-top: -7px;
 }
 .user-nav__search{
     position: relative;
@@ -201,10 +207,17 @@ a{
     background-color: rgba(255, 255, 255);
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    border-radius: 20px;
 }
 .btn:hover{
     background-image: linear-gradient( 90deg, rgba(231,74,53, 0.8) 0%, rgba(242,104,67, 0.8) 100%);
-    box-shadow: 0px 2px 2px 0px rgb(172, 16, 0);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.99);
+}
+.btn:active{
+    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.99);
+}
+
 }
 .login{
     margin-right: 10px;
@@ -212,7 +225,6 @@ a{
 .login__btn{
     position: relative;
     background-color: rgb(161, 180, 169);
-    border-radius: 20px;
     padding-left: 45px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -323,8 +335,7 @@ a{
     font-size: 14px;
     line-height: 16px;
 }
-.range__title{
-}
+
 /*============ banners =================*/
 .banners{
     display: flex;
@@ -333,12 +344,12 @@ a{
     margin-top: 19px;
 }
 .banner{
+    display: flex;
+    flex-direction: column;
     width: 560px;
     min-height: 229px;
     border-radius: 15px;
-}
-.banner a{
-    display: inline-block;
+    padding: 20px;
 }
 .banner--raspberry{
     background-image: url(../img/bg-banner-raspberry.jpg);
@@ -350,7 +361,6 @@ a{
 }
 .banner__title{
     margin: 0;
-    padding: 17px;
     padding-bottom: 14px;
     font-size: 35px;
     line-height: 41px;
@@ -358,9 +368,6 @@ a{
 }
 .banner__content{
     margin: 0;
-    padding: 0;
-    padding-left: 19px;
-    padding-right: 19px;
     font-size: 18px;
     font-weight: 700;
 }
@@ -369,7 +376,12 @@ a{
     padding-right: 22px;
     padding-top: 13px;
     padding-bottom: 13px;
-    border-radius: 20px;
+    margin-left: auto;
+    margin-top: auto;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    border-radius: 30px;
 }
 /*========= product ===========*/
 .product{
@@ -380,6 +392,9 @@ a{
 }
 .product__item{
     width: 267px;
+}
+.product__img{
+    border-radius: 50%;
 }
 /*============== page-control ==========*/
 .page-control{
