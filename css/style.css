@@ -441,6 +441,8 @@ img{
 }
 /*============== advantages =================*/
 .advantages{
+    margin-top: 23px;
+    margin-bottom: 42px;
     background-image: url(../img/bg-waffle.jpg);
     background-repeat: repeat;
     border-radius: 15px;
@@ -473,7 +475,7 @@ img{
 }
 .advantages__item{
     margin: 0;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     padding-left: 57px;
     color: rgb(50, 50, 50);
 }
@@ -541,6 +543,8 @@ img{
     flex-direction: row;
     align-items: center;
     min-height: 430px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     background-image: url(../img/bg-map.jpg);
     background-repeat: no-repeat;
 }
