@@ -483,8 +483,6 @@ img{
   line-height: 24px;
   font-weight: 700;
 }
-
-
 .btn{
   display: inline-block;
   padding: 10px 15px;
@@ -506,6 +504,7 @@ img{
   background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.99);
 }
+/*======= .slider ======*/
 .slides__title{
   font-size: 60px;
   line-height: 60.35px;
@@ -530,6 +529,9 @@ img{
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
+}
+svg{
+  border: 1px solid red;
 }
 /*========= filters ==========*/
 .filters{
