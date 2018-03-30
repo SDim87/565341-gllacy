@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="bg-icecream-1">
     <header class="main-header">
       <div class="container">
         <div class="wrapper-navigation">
           <a class="logo" href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Магазин мороженного «Gllacy Shop»"></a>
           <nav class="main-nav">
             <ul class="main-nav__list">
-              <li class="main-nav__item"><a href="catalog.html">Каталог</a><!-- main-nav__item--active если на стр находимся-->
+              <li class="main-nav__item"><a href="catalog.html">Каталог</a><!-- .main-nav__item--active если на стр находимся-->
                 <ul class="main-nav__sub-list">
-                  <li class="sub-list__item sub-list__item--bold sub-list__item--active"><a href="#">Новинки</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Сливочное</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Щербеты</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Фруктовый лед</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Мелорин</a></li>
+                  <li class="sub-list__item--strong"><a href="#">Новинки</a></li><!--.sub-list__item--active если на стр-->
+                  <li class="sub-list__item"><a href="#">Сливочное</a></li>
+                  <li class="sub-list__item"><a href="#">Щербеты</a></li>
+                  <li class="sub-list__item"><a href="#">Фруктовый лед</a></li>
+                  <li class="sub-list__item"><a href="#">Мелорин</a></li>
                 </ul>
               </li>
               <li class="main-nav__item"><a href="#">Доставка и оплата</a></li>
@@ -27,26 +27,22 @@
             </ul>
           </nav>
           <section class="user-nav" aria-label="Клиентская навигация">
-            <div class="search-box">
-              <a class="user-nav__search"></a>
-              <form class="user-nav__form" method="post" action="https://echo.htmlacademy.ru">
-                <input class="form__search" id="user-nav__search" type="search" name="user-nav__search">
-                <input class="visually-hidden" type="submit" value="Искать">
-              </form>
+            <div class="search">
+              <a class="search__btn">Поиск</a>
+              <div class="search__box">
+                <form class="search__form" method="post" action="https://echo.htmlacademy.ru">
+                  <input class="search__field" id="user-nav__search" type="search" name="user-nav__search" placeholder="Что ищем?">
+                  <input class="visually-hidden" type="submit" value="Искать">
+                </form>
+              </div>
             </div>
 
             <div class="login">
               <a class="login__btn" href="#">Вход</a>
-              <div class="login-form">
-                <form action="https://echo.glassy.ru" method="post" enctype="text/plain">
-                  <div class="login-form__container">
-                    <input id="login" type="email" name="email" class="login-form__field login-form__field--email" placeholder="Электронная почта" required>
-                    <label class="login-form__label" for="login">Электронная почта</label>
-                  </div>
-                  <div class="login-form__container">
-                    <input id="password" type="password" name="password" class="login-form__field login-form__field--password" placeholder="Пароль" required>
-                    <label  class="login-form__label" for="password">Пароль</label>
-                  </div>
+              <div class="login-box">
+                <form class="login__form" action="https://echo.glassy.ru" method="post" enctype="text/plain">
+                  <input class="login-form__field" id="login" type="email" name="email"  placeholder="Электронная почта" required>
+                  <input class="login-form__field"  id="password" type="password" name="password" placeholder="Пароль" required>
                   <button type="submit" class="btn login-form__btn-enter">Войти</button>
                   <div class="login-form__links">
                     <a href="#">Забыли пароль?</a>
@@ -56,32 +52,34 @@
               </div>
             </div>
 
-            <a class="basket__link" href="#">Пусто</a>
-            <div class="basket__popup">
-              <table class="table__popup">
-                <tr class="table__row">
-                  <td class="table__cell"><button class="close">Убрать</button></td>
-                  <td class="table__cell"><img src="img/basket-img-1.jpg" alt="Пломбир с апельсиновым джемом"></td>
-                  <td class="table__cell">Пломбир с апельсиновым джемом</td>
-                  <td class="table__cell">1,5 кг х 200 руб.</td>
-                  <td class="table__cell">300 руб.</td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell"><button class="close">Убрать</button></td>
-                  <td class="table__cell"><img src="img/basket-img-2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                  <td class="table__cell">Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td class="table__cell">1,5 кг х 300 руб.</td>
-                  <td class="table__cell">450 руб.</td>
-                </tr>
-              </table><hr>
-              <p>Итого: <span>750 руб.</span></p>
-              <a class="btn" href="#">Оформить заказ</a>
+            <div class="basket">
+              <a class="basket__link" href="#">Пусто</a>
+              <div class="basket__popup">
+                  <table class="basket__table">
+                    <tr class="table__row">
+                      <td class="table__cell"><a href="#" class="btn__close">&times;</a></td>
+                      <td class="table__cell table__cell--img"><img src="img/basket-img-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                      <td class="table__cell table__cell--name">Пломбир с апельсиновым джемом</td>
+                      <td class="table__cell table__cell--price">1,5 кг х <span class="value">200 руб.</span></td>
+                      <td class="table__cell table__cell--sum">300 руб.</td>
+                    </tr>
+                    <tr class="table__row">
+                      <td class="table__cell"><a href="#" class="btn__close">&times;</a></td>
+                      <td class="table__cell table__cell--img"><img src="img/basket-img-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                      <td class="table__cell table__cell--name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td class="table__cell table__cell--price">1,5 кг х <span class="value">300 руб.</span></td>
+                      <td class="table__cell table__cell--sum">450 руб.</td>
+                    </tr>
+                  </table><hr class="line">
+                  <p class="basket__all">Итого: <span class="basket__total">750 руб.</span></p>
+                  <a class="btn btn__basket" href="#">Оформить заказ</a>
+              </div>
             </div>
           </section>
         </div>
         <div class="main-header__contacts">
           <p class="time">С 10 до 20, ежедневно</p>
-          <p class="number">8 812 450-25-25</p>
+          <p class="phone">8 812 450-25-25</p>
         </div>
         <section class="main-header__slider">
           <div class="slides">
@@ -160,16 +158,10 @@
       <section class="advantages">
         <div class="advantages__wrapper">
           <h3 class="advantages__title">Магазин Глэйси &#8212; это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
-          <div class="advantages__items-wrapper">
-            <div class="advantages__items-box">
-              <p class="advantages__item advantages__item--icon-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-              <p class="advantages__item advantages__item--icon-eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
-            </div>
-            <div class="advantages__items-box">
-              <p class="advantages__item advantages__item--icon-cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-              <p class="advantages__item advantages__item--icon-thermopak">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-            </div>
-          </div>
+          <p class="advantages__item advantages__item--icon-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+          <p class="advantages__item advantages__item--icon-eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+          <p class="advantages__item advantages__item--icon-cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          <p class="advantages__item advantages__item--icon-thermopak">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </div>
       </section>
 

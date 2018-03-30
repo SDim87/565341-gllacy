@@ -15,11 +15,11 @@
             <ul class="main-nav__list">
               <li class="main-nav__item"><a href="catalog.html">Каталог</a><!-- main-nav__item--active если на стр находимся-->
                 <ul class="main-nav__sub-list">
-                  <li class="sub-list__item sub-list__item--bold sub-list__item--active"><a href="#">Новинки</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Сливочное</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Щербеты</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Фруктовый лед</a></li>
-                  <li class="sub-list__item sub-list__item--active"><a href="#">Мелорин</a></li>
+                  <li class="sub-list__item sub-list__item--strong"><a href="#">Новинки</a></li>
+                  <li class="sub-list__item"><a href="#">Сливочное</a></li>
+                  <li class="sub-list__item"><a href="#">Щербеты</a></li>
+                  <li class="sub-list__item"><a href="#">Фруктовый лед</a></li>
+                  <li class="sub-list__item"><a href="#">Мелорин</a></li>
                 </ul>
               </li>
               <li class="main-nav__item"><a href="#">Доставка и оплата</a></li>
@@ -81,31 +81,8 @@
         </div>
         <div class="main-header__contacts">
           <p class="time">С 10 до 20, ежедневно</p>
-          <p class="number">8 812 450-25-25</p>
+          <p class="phone">8 812 450-25-25</p>
         </div>
-        <section class="main-header__slider">
-          <div class="slides">
-            <div class="slides__item">
-              <h2 class="slides__title">Крем-брюле и пломбир с малиновым джемом</h2>
-              <a class="btn slides__btn" href="#">Давайте оба!</a>
-            </div>
-
-            <!-- <div class="slides__item">
-              <h2 class="slides__title">Шоколадный пломбир и лимонный сорбет</h2>
-              <a class="btn slides__btn" href="#">Давайте оба!</a>
-            </div>
-
-            <div class="slides__item">
-              <h2 class="slides__title">Пломбир с помадкой и клубничный щербет</h2>
-              <a class="btn slides__btn" href="#">Давайте оба!</a>
-            </div> -->
-          </div>
-          <div class="inners">
-            <i class="slider__inner slider__inner--active">&bull;</i>
-            <i class="slider__inner">&bull;</i>
-            <i class="slider__inner">&bull;</i>
-          </div>
-        </section>
       </div>
     </header>
     <main>
@@ -118,23 +95,23 @@
       <section class="filters">
         <form class="filters__form" action="https://htmlacademy.ru" method="post">
           <div class="filters__wrapper">
-            <div class="select">
-              <h4 class="select__title">Сортировка:</h4>
+            <fildset class="select">
+              <legend class="select__title">Сортировка:</legend>
               <select class="select__list" name="sort" id="filters-sort">
                 <option class="select__item" value="on-popularity">по популярности</option>
                 <option class="select__item" value="first-cheap">сначала недорогие</option>
                 <option class="select__item" value="first-expensive">сначала дорогие</option>
                 <option class="select__item" value="of-fat">по жирности</option>
               </select>
-            </div>
-            <div class="range" aria-label="Регулировка цены">
-              <h4 class="range__title">Цена: 100 руб. – 500 руб.</h4>
+            </fildset>
+            <fildset class="range" aria-label="Регулировка цены">
+              <legend class="range__title">Цена: 100 руб. – 500 руб.</legend>
               <div></div>
               <div></div>
               <div></div>
-            </div>
-            <div class="radio">
-              <h4 class="radio__title">Жирность:</h4>
+            </fildset>
+            <fildset class="radio">
+              <legend class="radio__title">Жирность:</legend>
               <input type="radio" name="filters-radio" id="filters-radio-zero-percent">
               <label for="filters-radio-zero-percent">0%</label>
 
@@ -146,11 +123,11 @@
 
               <input type="radio" name="filters-radio" id="filters-radio-more-thirty-percent">
               <label for="filters-radio-more-thirty-percent">выше 30%</label>
-            </div>
+            </fildset>
           </div>
           <div class="filters__wrapper">
-            <div class="checkbox">
-              <h4 class="checkbox__title">Наполнители:</h4>
+            <fildset class="checkbox">
+              <legend class="checkbox__title">Наполнители:</legend>
               <input type="checkbox" name="chocolate" id="checkbox-chocolate">
               <label for="checkbox-chocolate">шоколадные</label>
 
@@ -165,7 +142,7 @@
 
               <input type="checkbox" name="jams" id="checkbox-jams">
               <label for="checkbox-jams">джемы</label>
-            </div>
+            </fildset>
             <button class="filters__btn" type="submit">Применить</button>
           </div>
         </form>
