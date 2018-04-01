@@ -93,57 +93,53 @@
         <h1>Сливочное мороженое</h1>
         <section class="filters">
           <form class="filters__form" action="https://htmlacademy.ru" method="post">
-            <div class="filters__wrapper">
-              <fildset class="select">
-                <legend class="select__title">Сортировка:</legend>
-                <select class="select__list" name="sort" id="filters-sort">
-                  <option class="select__item" value="on-popularity">по популярности</option>
-                  <option class="select__item" value="first-cheap">сначала недорогие</option>
-                  <option class="select__item" value="first-expensive">сначала дорогие</option>
-                  <option class="select__item" value="of-fat">по жирности</option>
-                </select>
-              </fildset>
-              <fildset class="range" aria-label="Регулировка цены">
-                <legend class="range__title">Цена: 100 руб. – 500 руб.</legend>
-                <div></div>
-                <div></div>
-                <div></div>
-              </fildset>
-              <fildset class="radio">
-                <legend class="radio__title">Жирность:</legend>
+            <fildset class="select">
+              <legend class="select__title">Сортировка:</legend>
+              <select class="select__list" name="sort" id="filters-sort">
+                <option class="select__item" value="on-popularity">по популярности</option>
+                <option class="select__item" value="first-cheap">сначала недорогие</option>
+                <option class="select__item" value="first-expensive">сначала дорогие</option>
+                <option class="select__item" value="of-fat">по жирности</option>
+              </select>
+            </fildset>
+            <fildset class="range" aria-label="Регулировка цены">
+              <legend class="range__title">Цена: 100 руб. – 500 руб.</legend>
+              <div class="range__box">
+                <div class="range__line-1"></div>
+                <div class="range__line-2"></div>
+                <div class="range__button range__button--first"></div>
+                <div class="range__button range__button--second"></div>
+              </div>
+            </fildset>
+            <fildset class="radio">
+              <legend class="radio__title">Жирность:</legend>
+              <div class="radio__box">
                 <input type="radio" name="filters-radio" id="filters-radio-zero-percent">
                 <label for="filters-radio-zero-percent">0%</label>
-
                 <input type="radio" name="filters-radio" id="filters-radio-to-ten-percent">
                 <label for="filters-radio-to-ten-percent">до 10%</label>
-
                 <input type="radio" name="filters-radio" id="filters-radio-to-thirty-percent">
                 <label for="filters-radio-to-thirty-percent">до 30%</label>
-
                 <input type="radio" name="filters-radio" id="filters-radio-more-thirty-percent">
                 <label for="filters-radio-more-thirty-percent">выше 30%</label>
-              </fildset>
-            </div>
-            <div class="filters__wrapper">
-              <fildset class="checkbox">
-                <legend class="checkbox__title">Наполнители:</legend>
+              </div>
+            </fildset>
+            <fildset class="checkbox">
+              <legend class="checkbox__title">Наполнители:</legend>
+              <div class="checkbox__box">
                 <input type="checkbox" name="chocolate" id="checkbox-chocolate">
                 <label for="checkbox-chocolate">шоколадные</label>
-
                 <input type="checkbox" name="sugar-powder" id="checkbox-sugar-powder">
                 <label for="checkbox-sugar-powder">сахарные присыпки</label>
-
                 <input type="checkbox" name="fruits" id="checkbox-fruits">
                 <label for="checkbox-fruits">фрукты</label>
-
                 <input type="checkbox" name="syrups" id="checkbox-syrups">
                 <label for="checkbox-syrups">сиропы</label>
-
                 <input type="checkbox" name="jams" id="checkbox-jams">
                 <label for="checkbox-jams">джемы</label>
-              </fildset>
-              <button class="filters__btn" type="submit">Применить</button>
-            </div>
+              </div>
+            </fildset>
+            <button class="filters__btn" type="submit">Применить</button>
           </form>
         </section>
 
@@ -260,20 +256,20 @@
     <footer class="main-footer">
       <div class="container">
         <div class="social">
-          <a class="social__item" href="#">TW</a>
-          <a class="social__item" href="#">Inst</a>
-          <a class="social__item" href="#">FB</a>
-          <a class="social__item" href="#">VK</a>
+          <a class="social__item social__item--tw" href="#">TW</a>
+          <a class="social__item social__item--inst" href="#">Inst</a>
+          <a class="social__item social__item--fb" href="#">FB</a>
+          <a class="social__item social__item--vk" href="#">VK</a>
         </div>
         <ul class="main-footer__menu">
           <li class="footer-menu__item footer-menu__item--heart"><a href="#">Для поставщиков</a></li>
-          <li class="footer-menu__item"><a href="#">О производстве</a></li>
           <li class="footer-menu__item"><a href="#">Наши документы</a></li>
+          <li class="footer-menu__item"><a href="#">О производстве</a></li>
           <li class="footer-menu__item"><a href="#">Экологические стандарты</a></li>
         </ul>
         <div class="main-footer__copyright">
           <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy-small.svg" width="120" height="38" alt="Ссылка на сайт htmlacademy"></a>
-          <p>Сделано в HTML Academy &copy; 2017</p>
+          <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> &copy; 2017</p>
         </div>
       </div>
     </footer>
