@@ -134,13 +134,7 @@ img {
   font-weight: bold;
   color: rgb(255, 255, 255);
   padding: 5px 13px;
-}
-.main-nav__item > a::after {
-  content: '';
-  display: block;
-  border-bottom: 1px solid #fff;
-  opacity: 0.2;
-  margin-top: -3px;
+  text-decoration: underline rgba(255, 255, 255, .2);
 }
 .main-nav__item:hover .main-nav__sub-list {
   display: block;
@@ -278,10 +272,10 @@ img {
 .search:hover .search__box {
   display: block;
 }
-.search:hover .search__btn {
+.search:hover .search__btn, .search:active .search__btn {
   background-color: rgb(248, 247, 244);
 }
-.search:hover .search__btn::after {
+.search:hover .search__btn::after, .search:active .search__btn::after {
   background-image: url(../img/loupe-black.png);
 }
 /*======== .login ========*/
@@ -309,9 +303,17 @@ img {
   left: 15px;
   width: 21px;
   height: 19px;
-  background-image: url(../img/enter-white.png);
+  background-image: url(../img/enter-white.svg);
   background-repeat: no-repeat;
 }
+.login:hover .login__btn, .login:active .login__btn, .login:focus .login__btn {
+  color: rgb(50, 50, 50);
+  background-color: rgb(248, 247, 244);
+}
+.login:hover .login__btn::after, .login:active .login__btn::after, .login:focus .login__btn::after {
+  background-image: url(../img/enter-black.svg);
+}
+
 .login-box {
   display: none;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -371,11 +373,7 @@ img {
 .basket {
   position: relative;
 }
-.basket:hover .basket__popup {
-  display: block;
-}
 .basket__link {
-  position: relative;
   background-color: rgb(161, 180, 169);
   border-radius: 20px;
   padding-left: 45px;
@@ -386,16 +384,30 @@ img {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-}
-.basket__link::after {
-  position: absolute;
-  top: 6px;
-  left: 16px;
-  content: '';
-  width: 21px;
-  height: 20px;
   background-image: url(../img/basket.svg);
   background-repeat: no-repeat;
+  background-position: 16px 6px;
+}
+.basket__link--active{
+  border-radius: 20px;
+  padding-left: 45px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 35px;
+  color: rgb(50, 50, 50);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  background-image: url(../img/basket-active.svg);
+  background-repeat: no-repeat;
+  background-position: 16px 6px;
+}
+.basket__link--active {
+  color: rgb(50, 50, 50);
+  background-color: rgb(248, 247, 244);
+}
+.basket--active:hover .basket__popup {
+  display: block;
 }
 .basket__popup {
   display: none;
@@ -424,14 +436,14 @@ img {
   line-height: 16px;
 }
 .table__cell {
-  padding: 11px 0px 3px;
+  padding: 5px 0px 11px;
   vertical-align: middle;
   position: relative;
 }
 .btn__close {
-  font-size: 28px;
-  color: rgb(50, 50, 50);
-  padding-right: 8px;
+  padding-right: 20px;
+  background-image: url(../img/x.svg);
+  background-repeat: no-repeat;
 }
 .table__cell--img {
   min-width: 33px;
@@ -459,12 +471,20 @@ img {
 .basket__all {
   color: rgb(50, 50, 50);
   text-align: right;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  border-top: 1px solid #cacac7;
+  padding-top: 13px;
+  margin-top: 10px;
+  margin-right: -6px;
 }
 .btn__basket {
   font-size: 18px;
   line-height: 24px;
   color: rgb(254, 254, 254);
   float: right;
+  margin-right: -6px;
 }
 
 /*========= .main-header__contacts ============*/
@@ -873,6 +893,7 @@ input + label:hover::after {
   display: block;
   font-weight: 500;
   color: rgb(255, 255, 255);
+  text-decoration: underline rgba(255, 255, 255, .2);
 }
 .btn-product {
   display: none;
@@ -896,6 +917,10 @@ input + label:hover::after {
 }
 .product__item:hover .btn-product {
   display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -90px;
 }
 /*============== page-control ==========*/
 .page-control {
@@ -1023,6 +1048,9 @@ input + label:hover::after {
   min-height: 220px;
   background-color: rgb(146, 205, 255);
   padding: 5px;
+  background-image: url(../img/mail-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .banner__wrapper {
   min-height: 210px;
@@ -1133,6 +1161,7 @@ input + label:hover::after {
   font-size: 13px;
   line-height: 18px;
   color: rgb(255, 255, 255);
+  text-decoration: underline rgba(255, 255, 255, .2);
 }
 .main-footer__copyright {
   width: 22.2%;
@@ -1151,16 +1180,7 @@ input + label:hover::after {
   font-size: 12px;
   line-height: 18px;
   color: rgb(254, 254, 254);
-}
-.copyright > a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  border-bottom: 1px solid #fff;
-  opacity: 0.2;
+  text-decoration: underline rgba(255, 255, 255, .2);
 }
 .feedback {
   display: none;
