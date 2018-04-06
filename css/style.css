@@ -51,7 +51,6 @@ img {
   max-width: 1200px;
   min-width: 900px;
   margin: 0 auto;
-  padding-top: 10px;
 }
 .visually-hidden {
   position: absolute;
@@ -81,11 +80,9 @@ img {
 .bg-glow {
   background-image: linear-gradient( to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(132, 157, 143, 0.99) 600px);
 }
-
-}
 /*====== .main-header =======*/
 .main-header {
-  padding-top: 10px;
+  margin-top: 10px;
 }
 .wrapper {
   padding-left: 2.3%;
@@ -142,7 +139,8 @@ img {
   font-weight: bold;
   color: rgb(255, 255, 255);
   padding: 5px 13px;
-  text-decoration: underline rgba(255, 255, 255, .2);
+  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
+          text-decoration: underline rgba(255, 255, 255, .2);
 }
 .main-nav__item:hover .main-nav__sub-list, .main-nav__item:focus + .main-nav__sub-list {
   display: block;
@@ -921,7 +919,7 @@ label {
   display: flex;
   flex-direction: column;
   width: 23.2%;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   text-align: center;
 }
 .product__item--icon {
@@ -956,12 +954,13 @@ label {
   font-size: 30px;
 }
 .product__description {
-  padding-top: 5px;
+  padding-top: 10px;
   position: relative;
   display: block;
   font-weight: 500;
   color: rgb(255, 255, 255);
-  text-decoration: underline rgba(255, 255, 255, .2);
+  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
+          text-decoration: underline rgba(255, 255, 255, .2);
 }
 .btn-product {
   display: none;
@@ -1001,6 +1000,7 @@ label {
 }
 .page-control__item {
   line-height: 18px;
+  font-weight: 500;
   color: #fff;
   padding: 5px 10px;
   border-radius: 50%;
@@ -1061,7 +1061,7 @@ label {
 }
 /*============== advantages =================*/
 .advantages {
-  margin-bottom: 42px;
+  margin-bottom: 45px;
   background-image: url(../img/bg-waffle.jpg);
   background-repeat: repeat;
   border-radius: 15px;
@@ -1209,9 +1209,6 @@ label {
 }
 /*========== map ================*/
 .map {
-  position: relative;
-  display: flex;
-  align-items: center;
   min-height: 430px;
   margin-top: 40px;
   background-image: url(../img/bg-map.jpg);
@@ -1220,26 +1217,20 @@ label {
   background-color: #f7f1d9;
   background-size: cover;
 }
-.map::before {
-  content: '';
-  position: absolute;
-  width: 80px;
-  height: 140px;
-  top: 140px;
-  left: 50%;
-  background-image: url(../img/pin.svg);
-  background-repeat: no-repeat;
-}
 .map-interactive {
   width: 100vw;
 }
+.contacts__wrapper {
+  max-width: 1200px;
+  min-width: 900px;
+  min-height: 430px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .contacts {
   width: 302px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  margin-left: auto;
   background-color: rgba(255, 255, 255, 0.98);
   padding: 30px 25px;
   color: rgb(50, 50, 50);
@@ -1247,6 +1238,7 @@ label {
   font-size: 14px;
   line-height: 20px;
   min-height: 305px;
+  margin-right: 2.3%;
 }
 .contacts__address {
   margin: 0;
@@ -1349,7 +1341,8 @@ label {
   font-size: 13px;
   line-height: 18px;
   color: rgb(255, 255, 255);
-  text-decoration: underline rgba(255, 255, 255, .2);
+  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
+          text-decoration: underline rgba(255, 255, 255, .2);
 }
 .footer-menu__item--heart {
   position: relative;
@@ -1360,9 +1353,12 @@ label {
   width: 15px;
   height: 15px;
   top: 5px;
-  left: -20px;
+  left: -23px;
   background-image: url(../img/heart.svg);
   background-repeat: no-repeat;
+}
+.main-footer__copyright {
+  margin-top: -10px;
 }
 .copyright {
   font-size: 12px;
@@ -1380,7 +1376,8 @@ label {
   font-size: 12px;
   line-height: 18px;
   color: rgb(254, 254, 254);
-  text-decoration: underline rgba(255, 255, 255, .2);
+  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
+          text-decoration: underline rgba(255, 255, 255, .2);
 }
 /*====== .feedback ======*/
 .modal {
@@ -1400,6 +1397,9 @@ label {
   height: 100%;
   background: rgba(0, 0, 0, .3);
   z-index: 10;
+}
+.modal-overlay--show {
+  display: block;
 }
 .modal-feedback {
   top: 50%;
@@ -1458,6 +1458,15 @@ label {
   padding: 10px 25px;
   align-self: flex-end;
 }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: rgb(153, 153, 153);
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: rgb(153, 153, 153);
+}
 input::placeholder, textarea::placeholder {
   color: rgb(153, 153, 153);
+}
+.modal-feedback--show {
+  display: block;
 }

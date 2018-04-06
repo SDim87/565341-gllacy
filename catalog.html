@@ -14,7 +14,7 @@
             <a class="logo" href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Магазин мороженного «Gllacy Shop»"></a>
             <nav class="main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="catalog.html">Каталог</a>
+                <li class="main-nav__item main-nav__item--active"><a href="catalog.html">Каталог</a>
                   <ul class="main-nav__sub-list">
                     <li class="sub-list__item--strong"><a href="#">Новинки</a></li>
                     <li class="sub-list__item"><a href="#">Сливочное</a></li>
@@ -28,7 +28,7 @@
               </ul>
             </nav>
             <section class="user-nav" aria-label="Клиентская навигация">
-              <div class="search">
+              <div class="search" tabindex="0">
                 <a class="search__btn">Поиск</a>
                 <div class="search__box">
                   <form class="search__form" method="post" action="https://echo.htmlacademy.ru">
@@ -116,13 +116,13 @@
                 <legend class="radio__title">Жирность:</legend>
                 <div class="radio__box">
                   <input type="radio" name="filters-radio" id="filters-radio-zero-percent" class="visually-hidden">
-                  <label for="filters-radio-zero-percent">0%</label>
+                  <label for="filters-radio-zero-percent" tabindex="0">0%</label>
                   <input type="radio" name="filters-radio" id="filters-radio-to-ten-percent" class="visually-hidden">
-                  <label for="filters-radio-to-ten-percent">до 10%</label>
+                  <label for="filters-radio-to-ten-percent" tabindex="0">до 10%</label>
                   <input type="radio" name="filters-radio" id="filters-radio-to-thirty-percent" class="visually-hidden">
-                  <label for="filters-radio-to-thirty-percent">до 30%</label>
+                  <label for="filters-radio-to-thirty-percent" tabindex="0">до 30%</label>
                   <input type="radio" name="filters-radio" id="filters-radio-more-thirty-percent" class="visually-hidden">
-                  <label for="filters-radio-more-thirty-percent">выше 30%</label>
+                  <label for="filters-radio-more-thirty-percent" tabindex="0">выше 30%</label>
                 </div>
               </fieldset>
               <fieldset class="checkbox">
@@ -140,7 +140,7 @@
                   <label for="checkbox-jams">джемы</label>
                 </div>
               </fieldset>
-              <button class="filters__btn" type="submit">Применить</button>
+              <button class="filters__btn" type="submit" method="post">Применить</button>
             </form>
           </section>
 

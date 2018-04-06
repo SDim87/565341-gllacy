@@ -1,15 +1,10 @@
-// Создаем маркер на карте
-var marker = new google.maps.Marker({
+var link = document.querySelector(".contacts__btn ");
+var popup = document.querySelector(".modal-feedback");
+var overlay = document.querySelector(".modal-overlay");
 
-                // Определяем позицию маркера
-                position: {lat: 59.938741, lng: 30.323041},
-
-                // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
-                map: map,
-
-                // Пишем название маркера - появится если навести на него курсор и немного подождать
-                title: 'htmlacademy',
-
-                // Укажем свою иконку для маркера
-                icon: '../img/pin.svg'
+link.addEventListener("click", function(evt){
+  evt.preventDefault();
+  popup.classList.add("modal-feedback--show");
+  overlay.classList.add("modal-overlay--show");
 });
+
