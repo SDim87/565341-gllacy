@@ -44,7 +44,7 @@
                   <form class="login__form" action="https://echo.glassy.ru" method="post" enctype="text/plain">
                     <input class="login-form__field" id="login" type="email" name="email"  placeholder="Электронная почта" required>
                     <input class="login-form__field"  id="password" type="password" name="password" placeholder="Пароль" required>
-                    <button type="submit" class="btn login-form__btn-enter">Войти</button>
+                    <button class="btn login-form__btn-enter" type="submit">Войти</button>
                     <div class="login-form__links">
                       <a href="#">Забыли пароль?</a>
                       <a href="#">Новая регистрация</a>
@@ -54,7 +54,7 @@
               </div>
 
               <div class="basket">
-                <a class="basket__link" href="#">Пусто</a>
+                <a class="basket__link">Пусто</a>
                 <div class="basket__popup">
                   <table class="basket__table">
                     <tr class="table__row">
@@ -124,7 +124,7 @@
             <div class="product__item product__item--icon">
               <div class="product__box-img">
                 <img class="product__img" src="img/icecream-1.jpg" width="267" height="267" alt="Мороженое сливочное с апельсиновым">
-                <p class="product__price"><b>310&#8381;</b><span class="small-font">/кг</span></p>
+                <p class="product__price"><b>310</b><span class="small-font">/кг</span></p>
               </div>
               <a class="product__description" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               <a class="btn btn-product" href="#">Быстрый просмотр</a>
@@ -132,7 +132,7 @@
             <div class="product__item product__item--icon">
               <div class="product__box-img">
                 <img class="product__img" src="img/icecream-2.jpg" width="267" height="267" alt="Мороженое сливочно-кофейное с кусочками шоколада">
-                <p class="product__price"><b>380&#8381;</b><span class="small-font">/кг</span></p>
+                <p class="product__price"><b>380</b><span class="small-font">/кг</span></p>
               </div>
               <a class="product__description" href="#">Сливочно-кофейное с кусочками шоколада</a>
               <a class="btn btn-product" href="#">Быстрый просмотр</a>
@@ -140,7 +140,7 @@
             <div class="product__item product__item--icon">
               <div class="product__box-img">
                 <img class="product__img" src="img/icecream-3.jpg" width="267" height="267" alt="Мороженое сливочно-клубничное с присыпкой из белого шоколада">
-                <p class="product__price"><b>355&#8381;</b><span class="small-font">/кг</span></p>
+                <p class="product__price"><b>355</b><span class="small-font">/кг</span></p>
               </div>
               <a class="product__description" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
               <a class="btn btn-product" href="#">Быстрый просмотр</a>
@@ -148,7 +148,7 @@
             <div class="product__item product__item--icon">
               <div class="product__box-img">
                 <img class="product__img" src="img/icecream-4.jpg" width="267" height="267" alt="Мороженное сливочное крем-брюле с карамельной подливкой">
-                <p class="product__price"><b>415&#8381;</b><span class="small-font">/кг</span></p>
+                <p class="product__price"><b>415</b><span class="small-font">/кг</span></p>
               </div>
               <a class="product__description" href="#">Сливочное крем-брюле с карамельной подливкой</a>
               <a class="btn btn-product" href="#">Быстрый просмотр</a>
@@ -175,7 +175,7 @@
                 <p class="subscribe__content">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
                   <input class="subscribe__mail" type="email" name="email" id="subscribe-email" placeholder="Электронная почта">
-                  <button class="btn subscribe__btn">Отправить</button>
+                  <button class="btn subscribe__btn" type="submit">Отправить</button>
                 </form>
               </div>
             </article>
@@ -205,7 +205,7 @@
             <a class="social__item social__item--vk" href="#">VKontakte</a>
           </div>
           <ul class="main-footer__menu">
-            <li class="footer-menu__item footer-menu__item--heart"><a href="#">Для поставщиков</a></li>
+            <li class="footer-menu__item footer-menu__item--heart footer-menu__item--strong"><a href="#">Для поставщиков</a></li>
             <li class="footer-menu__item"><a href="#">Наши документы</a></li>
             <li class="footer-menu__item"><a href="#">О производстве</a></li>
             <li class="footer-menu__item"><a href="#">Экологические стандарты</a></li>
@@ -219,12 +219,12 @@
     </div>
     <section class="modal modal-feedback">
       <h3 class="modal__title">Мы обязательно вам ответим!</h3>
-      <a class="modal__close" href="#"><img src="img/x-big.svg" alt="Закрыть"></a>
+      <a class="modal__close" href="#"></a>
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
         <input class="modal-form__name" type="text" name="name" placeholder="Как вас зовут?">
         <input class="modal-form__email" type="email" name="email" placeholder="Ваша почта для ответа?">
         <textarea class="modal-form__textarea" name="textarea" cols="30" rows="7" placeholder="Напишите что-нибудь..."></textarea>
-        <button class="btn btn__modal">Отправить</button>
+        <button class="btn btn__modal" type="submit">Отправить</button>
       </form>
     </section>
     <div class="modal-overlay"></div>
