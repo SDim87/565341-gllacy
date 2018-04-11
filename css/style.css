@@ -85,13 +85,13 @@ img {
 }
 /*====== .main-header =======*/
 .main-header {
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .wrapper {
   padding-left: 2.3%;
   padding-right: 2.3%;
 }
-.main-header .wrapper {
+.main-header.wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -120,7 +120,8 @@ img {
   border: none;
   border-radius: 20px;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-image: linear-gradient( to top, rgba(231,74,53, 0.8) 0%, rgba(242,104,67, 0.8) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.99);
 }
@@ -146,21 +147,24 @@ img {
   border-radius: 20px;
   margin-right: 3px;
 }
-.main-nav__item--active {
-  color: rgb(255, 255, 255);
-  background-color: rgb(208, 112, 88);
-}
 .main-nav__item > a {
   display: block;
   line-height: 18px;
   font-weight: bold;
   color: rgb(255, 255, 255);
   padding: 7px 13px;
-  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
-          text-decoration: underline rgba(255, 255, 255, .2);
 }
-.main-nav__item--active > a {
-  text-decoration: none;
+.main-nav__item > a::after{
+  content: '';
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+.main-nav__item--active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(208, 112, 88);
+}
+.main-nav__item--active > a::after {
+  border: none;
 }
 .main-nav__item:hover{
   background-color: rgb(247, 246, 243);
@@ -305,6 +309,9 @@ img {
   line-height: 24px;
   color: rgb(153, 153, 153);
 }
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .search__field { height: 46px; } /* IE11 */
+}
 .search__field:hover,
 .search__field:focus {
   padding: 9px 11px;
@@ -328,6 +335,8 @@ textarea{
   border: 1px solid rgba(178, 178, 178, .5);
   border-radius: 5px;
   font-family: inherit;
+  color: rgb(50, 50, 50);
+  font-weight: 700;
 }
 input[type="text"]:hover,
 input[type="search"]:hover,
@@ -342,8 +351,43 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus{
   border: 2px solid rgba(46, 136, 228, .5);
-  color: rgb(50, 50, 50);
   outline: none;
+}
+input[type="text"]:focus:-ms-input-placeholder,
+input[type="search"]:focus:-ms-input-placeholder,
+input[type="email"]:focus:-ms-input-placeholder,
+input[type="password"]:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder{
+  color: transparent;
+}
+input[type="text"]:focus::-ms-input-placeholder,
+input[type="search"]:focus::-ms-input-placeholder,
+input[type="email"]:focus::-ms-input-placeholder,
+input[type="password"]:focus::-ms-input-placeholder,
+textarea:focus::-ms-input-placeholder{
+  color: transparent;
+}
+input[type="text"]:focus::placeholder,
+input[type="search"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+textarea:focus::placeholder{
+  color: transparent;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(153, 153, 153);
+  font-weight: 400;
 }
 /*======== .login ========*/
 .login {
@@ -366,10 +410,10 @@ textarea:focus{
 .login__btn::after {
   position: absolute;
   content: '';
-  top: 6px;
+  top: 7px;
   left: 18px;
   width: 21px;
-  height: 19px;
+  height: 21px;
   background-image: url(../img/enter-white.svg);
   background-repeat: no-repeat;
 }
@@ -392,6 +436,7 @@ textarea:focus{
   background-color: rgb(248, 247, 244);
   padding: 20px;
   min-width: 275px;
+  max-width: 100%;
   top: 32px;
   right: -3px;
   border-radius: 5px;
@@ -431,22 +476,22 @@ textarea:focus{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-self: flex-end;
-  padding-left: 20px;
+  padding-left: 10px;
+  margin-left: auto;
 }
 .login-form__links a {
   margin-top: -1px;
   color: rgb(50, 50, 50);
   font-size: 13px;
   line-height: 24px;
-  -webkit-text-decoration: underline #b2b2b2;
-          text-decoration: underline #b2b2b2;
+  -webkit-text-decoration: underline rgba(0, 0, 0, .3);
+          text-decoration: underline rgba(0, 0, 0, .3);
 }
 .login-form__links a:hover,
 .login-form__links a:active {
   color: rgb(232, 77, 55);
-  -webkit-text-decoration: underline #f9cdc4;
-          text-decoration: underline #f9cdc4;
+  -webkit-text-decoration: underline rgba(236, 89, 60, .3);
+          text-decoration: underline rgba(236, 89, 60, .3);
 }
 .login-form__field:hover,
 .login-form__field:focus {
@@ -599,10 +644,10 @@ textarea:focus{
   display: flex;
   padding: 0;
   margin: 0;
-  margin-top: -20px;
+  margin-top: -19px;
 }
 .breadcrumb__item {
-  margin-right: 10px;
+  margin-right: 6px;
   font-size: 14px;
   line-height: 16px;
   color: rgb(255, 255, 255);
@@ -611,11 +656,11 @@ textarea:focus{
   font-size: 14px;
   line-height: 16px;
   color: rgb(255, 255, 255);
-  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
-  text-decoration: underline rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(253, 254, 254, .2);
+  margin-right: 7px;
 }
 .breadcrumb__item--no-active a {
-  text-decoration: none;
+  border-bottom: none;
 }
 .main__title {
   margin-top: 5px;
@@ -626,12 +671,11 @@ textarea:focus{
 .breadcrumb__item a:hover,
 .breadcrumb__item a:active {
   color: rgb(255, 188, 158);
-  -webkit-text-decoration: underline rgba(249, 172, 159, .3);
-  text-decoration: underline rgba(249, 172, 159, .3);
+  border-bottom: 1px solid rgba(249, 172, 159, .3);
 }
 .breadcrumb__item--no-active a:hover,
 .breadcrumb__item--no-active a:active {
-  text-decoration: none;
+  border-bottom: none;
   color: rgb(255, 255, 255);
 }
 /*======= .slider ======*/
@@ -808,6 +852,12 @@ textarea:focus{
   left: 133px;
   margin-top: -10px;
 }
+.range__button:hover,
+.range__button:focus {
+  width: 24px;
+  height: 24px;
+  transform: translate(-2px, -2px);
+}
 /*========= .radio ========*/
 .radio__box {
   display: flex;
@@ -819,6 +869,9 @@ textarea:focus{
   border-radius: 20px;
   padding-left: 13px;
   padding-right: 18px;
+}
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .radio__box { height: 36px; } /* IE11 */
 }
 label {
   position: relative;
@@ -882,6 +935,9 @@ label {
   padding-right: 20px;
   margin-top: 3px;
 }
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .checkbox__box { height: 36px; } /* IE11 */
+}
 .checkbox__box label::before {
   content: '';
   width: 23px;
@@ -925,7 +981,8 @@ label {
   border: 2px solid #fff;
   background-color: rgba(248, 247, 244, 0.2);
 }
-.filters__btn:hover {
+.filters__btn:hover,
+.filters__btn:focus {
   background-color: rgb(251, 252, 251);
   color: rgb(50, 50, 50);
 }
@@ -950,6 +1007,9 @@ label {
   min-height: 229px;
   border-radius: 15px;
   padding: 13px 20px 24px;
+}
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .banners .banner { height: 229px; } /* IE11 */
 }
 .banner--raspberry {
   background-image: url(../img/bg-banner-raspberry.jpg);
@@ -1054,12 +1114,16 @@ label {
   -webkit-text-decoration: underline rgba(255, 255, 255, .2);
           text-decoration: underline rgba(255, 255, 255, .2);
 }
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .product__description { text-decoration: underline; } /* IE11 */
+}
 .btn-product {
   display: none;
   padding-left: 25px;
   padding-right: 25px;
 }
-.product__item:hover {
+.product__item:hover,
+.product__item:focus {
   border-radius: 5px;
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -1082,6 +1146,7 @@ label {
   margin-top: auto;
 }
 .product__description:hover,
+.product__description:focus,
 .product__description:active {
   color: rgb(255, 188, 158);
   -webkit-text-decoration: underline rgba(249, 172, 159, .3);
@@ -1266,6 +1331,12 @@ label {
   text-decoration: underline;
   max-width: 280px;
 }
+.news__topic:hover,
+.news__topic:focus {
+  color: rgb(232, 77, 55);
+  -webkit-text-decoration: underline rgba(236, 89, 60, .3);
+          text-decoration: underline rgba(236, 89, 60, .3);
+}
 .banner--subscribe {
   min-height: 220px;
   background-color: rgb(146, 205, 255);
@@ -1295,6 +1366,9 @@ label {
   color: rgb(153, 153, 153);
   padding: 15px;
   flex-grow: 1;
+}
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .subscribe__mail { line-height: 10px; } /* IE11 */
 }
 .subscribe__mail:hover,
 .subscribe__mail:focus {
@@ -1331,6 +1405,9 @@ label {
   justify-content: flex-end;
   align-items: center;
 }
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .contacts__wrapper { height: 430px; } /* IE11 */
+}
 .contacts {
   width: 302px;
   background-color: rgba(255, 255, 255, 0.98);
@@ -1366,7 +1443,7 @@ label {
   padding-top: 17px;
   padding-bottom: 20px;
 }
-.main-footer .wrapper {
+.main-footer.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1449,8 +1526,7 @@ label {
   font-size: 13px;
   line-height: 18px;
   color: rgb(255, 255, 255);
-  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
-          text-decoration: underline rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 .footer-menu__item--heart {
   position: relative;
@@ -1487,29 +1563,35 @@ label {
   font-size: 12px;
   line-height: 18px;
   color: rgb(254, 254, 254);
-  -webkit-text-decoration: underline rgba(255, 255, 255, .2);
-          text-decoration: underline rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 .footer-menu__item a:hover,
-.footer-menu__item a:active {
-  color: rgb(255, 188, 158);
-  -webkit-text-decoration: underline rgba(249, 172, 159, .3);
-          text-decoration: underline rgba(249, 172, 159, .3);
-}
+.footer-menu__item a:focus,
+.footer-menu__item a:active,
 .copyright a:hover,
+.copyright a:focus,
 .copyright a:active {
   color: rgb(255, 188, 158);
-  -webkit-text-decoration: underline rgba(249, 172, 159, .3);
-          text-decoration: underline rgba(249, 172, 159, .3);
+  border-bottom: 1px solid rgba(249, 172, 159, .3);
 }
-/*====== .feedback ======*/
+/*====== .modal .modal-feedback ======*/
 .modal {
-  display: none;
   position: fixed;
   padding: 16px 24px;
   background-color: rgb(248, 247, 244);
   border-radius: 10px;
-  z-index: 100;
+}
+.modal-feedback {
+  top: 50%;
+  left: 50%;
+  width: 477px;
+  min-height: 442px;
+  transform: translate(-50%, -500%);
+  transition: .5s;
+  z-index: 1000;
+}
+.modal-feedback--show {
+  transform: translate(-50%, -50%);
 }
 .modal-overlay {
   display: none;
@@ -1519,18 +1601,10 @@ label {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, .3);
-  z-index: 10;
+  z-index: 999;
 }
 .modal-overlay--show {
   display: block;
-}
-.modal-feedback {
-  top: 50%;
-  left: 50%;
-  width: 477px;
-  min-height: 442px;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
 }
 .modal__title {
   color: rgb(50, 50, 50);
@@ -1552,20 +1626,17 @@ label {
   display: flex;
   flex-direction: column;
 }
-.modal-form__name {
+.modal-form__name,
+.modal-form__email {
   width: 267px;
+  min-height: 44px;
   background-color: rgb(255, 255, 255);
   margin-top: 20px;
   padding: 11px;
-  padding-left: 12px;
+  padding-left: 15px;
 }
-.modal-form__email {
-  width: 267px;
-  height: 37px;
-  background-color: rgb(255, 255, 255);
-  margin-top: 21px;
-  padding: 20px;
-  padding-left: 12px;
+@media all and (-ms-high-contrast:none) {
+ ::-ms-backdrop, .modal-form__name, .modal-form__email { height: 44px; } /* IE11 */
 }
 .modal-form__textarea {
   margin-top: 20px;
@@ -1584,14 +1655,11 @@ label {
   align-self: flex-end;
 }
 .modal-form__name:hover,
-.modal-form__name:focus {
-  padding: 10px;
-  padding-left: 11px;
-}
+.modal-form__name:focus,
 .modal-form__email:hover,
 .modal-form__email:focus {
-  padding: 19px;
-  padding-left: 11px;
+  padding: 10px;
+  padding-left: 14px;
 }
 .modal-form__textarea:hover,
 .modal-form__textarea:focus {
@@ -1601,21 +1669,5 @@ label {
 .modal-form__name:focus,
 .modal-form__email:focus,
 .modal-form__textarea:focus {
-  font-weight: 700;
   color: rgb(50, 50, 50);
-}
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: rgb(153, 153, 153);
-}
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-  color: rgb(153, 153, 153);
-}
-input::placeholder,
-textarea::placeholder {
-  color: rgb(153, 153, 153);
-}
-.modal-feedback--show {
-  display: block;
 }
