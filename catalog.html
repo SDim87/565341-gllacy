@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="bg-glow">
     <div class="container">
@@ -31,12 +31,11 @@
               <a class="search__btn">Поиск</a>
               <div class="search__box">
                 <form class="search__form" method="post" action="https://echo.htmlacademy.ru">
-                  <input class="search__field" id="user-nav__search" type="search" name="user-nav__search" placeholder="Что ищем?">
+                  <input class="search__field" id="user-nav__search" type="search" name="user-nav__search" placeholder="Что ищем?" required>
                   <input class="visually-hidden" type="submit" value="Искать">
                 </form>
               </div>
             </div>
-
             <div class="login">
               <a class="login__btn" href="#">Вход</a>
               <div class="login-box">
@@ -51,7 +50,6 @@
                 </form>
               </div>
             </div>
-
             <div class="basket basket--active">
               <a class="basket__link--active" href="#">2 товара</a>
               <div class="basket__popup">
@@ -140,7 +138,6 @@
             <button class="filters__btn" type="submit">Применить</button>
           </form>
         </section>
-
         <section class="product" aria-label="Ассортимент">
           <div class="product__item">
             <div class="product__box-img">
@@ -211,7 +208,7 @@
               <img class="product__img" src="img/icecream-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
               <p class="product__price"><b>440</b><span class="small-font">/кг</span></p>
             </div>
-            <a class="product__description" href="#">Сливочно-ванильное с кусочками шоколада</a>
+            <a class="product__description" href="#">Сливочно-ванильное с кусочками&nbsp;шоколада</a>
             <a class="btn btn-product" href="#">Быстрый просмотр</a>
           </div>
           <div class="product__item">
@@ -268,6 +265,5 @@
         </div>
       </footer>
     </div>
-    <script src="js/scripts.js"></script>
   </body>
 </html>

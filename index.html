@@ -31,7 +31,7 @@
               <a class="search__btn">Поиск</a>
               <div class="search__box">
                 <form class="search__form" method="post" action="https://echo.htmlacademy.ru">
-                  <input class="search__field" id="user-nav__search" type="search" name="user-nav__search" placeholder="Что ищем?">
+                  <input class="search__field" id="user-nav__search" type="search" name="user-nav__search" placeholder="Что ищем?" required>
                   <input class="visually-hidden" type="submit" value="Искать">
                 </form>
               </div>
@@ -164,7 +164,7 @@
             <div class="banner__wrapper">
               <p class="subscribe__content">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-                <input class="subscribe__mail" type="email" name="email" id="subscribe-email" placeholder="Электронная почта">
+                <input class="subscribe__mail" type="email" name="email" id="subscribe-email" placeholder="Электронная почта" required>
                 <button class="btn subscribe__btn" type="submit">Отправить</button>
               </form>
             </div>
@@ -207,7 +207,7 @@
       <h3 class="modal__title">Мы обязательно вам ответим!</h3>
       <a class="modal__close" href="#"></a>
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-        <input class="modal-form__name" type="text" name="name" placeholder="Как вас зовут?">
+        <input class="modal-form__name" type="text" name="first-name" placeholder="Как вас зовут?">
         <input class="modal-form__email" type="email" name="email" placeholder="Ваша почта для ответа?">
         <textarea class="modal-form__textarea" name="textarea" placeholder="Напишите что-нибудь..."></textarea>
         <button class="btn btn__modal" type="submit">Отправить</button>
