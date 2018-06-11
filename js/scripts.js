@@ -1,4 +1,4 @@
-var link = document.querySelector(".contacts__btn ");
+var link = document.querySelector(".contacts__btn");
 var popup = document.querySelector(".modal-feedback");
 var overlay = document.querySelector(".modal-overlay");
 var switchers = document.querySelectorAll(".slider__inner");
